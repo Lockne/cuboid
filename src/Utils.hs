@@ -19,3 +19,6 @@ rotateVector theta v = rotateTheta theta v
     rotateTheta i _ = rotateTheta (abs $ i `mod` 4) v
 
 -- | (0 0 1) -> (0 1 0) -> (0 0 -1) -> (0 -1 0) -> (0 0 1)
+
+size :: Level -> Integer
+size = (+1) . maximum . map (\(P3D x y z) -> maximum [x,y,z]) . obstacles

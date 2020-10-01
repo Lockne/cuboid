@@ -38,3 +38,7 @@ data ParsedInput =
     , leftEvent :: Event Input
     , rightEvent :: Event Input
     }
+
+data GameState = Game { level     :: Level,
+                        rotX      :: R,
+                        playerPos :: Vector3 R }
